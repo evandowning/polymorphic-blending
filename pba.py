@@ -6,7 +6,7 @@ import substitution
 import padding
 
 def usage():
-    print 'usage: python pba.py pba.cfg'
+    sys.stderr.write('usage: python pba.py pba.cfg\n')
     sys.exit(2)
 
 def _main():

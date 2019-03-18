@@ -66,8 +66,8 @@ def getSubstitutionTable(artificial_payload, attack_payload):
                 highest = key
         substitution_table[highest].append(sorted_artificial_frequency[i])
 
-    print 'Substitution Table:'
-    print substitution_table
+    sys.stdout.write('Substitution Table:\n')
+    sys.stdout.write('{0}\n'.format(substitution_table))
 
     # You may implement substitution table in your way. Just make sure it can be used in substitute(attack_payload, subsitution_table)
     return substitution_table
