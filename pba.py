@@ -1,5 +1,6 @@
 import sys
 import configparser
+import cPickle as pkl
 
 import substitution
 import padding
@@ -57,8 +58,10 @@ def _main():
         padding.padding(artificial_payload, raw_payload)
 
     # Write prepared payload to Output file and test against your PAYL model
-    with open(output_path, 'w') as fw:
-        fw.write(''.join(raw_payload))
+    with open(output_path, 'wb') as fw:
+        # Number of payloads
+        pkl.dump(1,fw)
+        pkl.dump((''.join(raw_payload),'1'),fw)
 
     # Write payload.bin to check
     with open('verify/payload.bin','wb') as fw:
