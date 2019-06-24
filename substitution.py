@@ -1,3 +1,4 @@
+import sys
 import dpkt
 import socket
 from collections import Counter
